@@ -1,0 +1,104 @@
+// Header
+
+body{
+    background-color: #424242;
+}
+
+.logo{
+    @media (max-width: $breakpoint768) {
+        max-width: 120px;
+    }
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 0px;
+
+    @media (max-width: $breakpoint992) {
+        padding: 10px 0px;
+    }
+
+    &-ul{
+        display: flex;
+        flex-direction: column;
+        animation: fade 1s linear ease-in;
+        position: relative;
+
+        &-nst{
+            max-width: 29px;
+            height: 29px;
+            transition: all ease 0.3s;
+        }
+
+        &-title{
+            position: absolute;
+            top: 43px;
+            right: 0px;
+            padding: 8px 20px;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+            color: #fff;
+            background-color: #686868;
+            border-radius: 15px;
+            animation: fade 1s linear ease-in;
+            width: 200px;
+            transition: all ease 0.3s;
+
+            @media (max-width: $breakpoint768) {
+                 font-size: 16px;
+                 line-height: 120%;
+                 padding: 5px 16px;
+            }
+
+
+            &:hover{
+                background-color: #555555;
+            }
+
+            &.hidden{
+                display: none;
+            }
+        }
+    }
+
+    &-btns{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @media (max-width: $breakpoint768) {
+           gap: 20px;
+        }
+
+        & img {
+            cursor: pointer;
+        }
+
+        &-title{
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            text-transform: uppercase; 
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: all ease 0.3s;
+
+            @media (max-width: $breakpoint768) {
+                font-size: 14px;
+             }
+
+            &:hover{
+                color: #558B2F;
+            }
+        }
+
+        &-l{
+            height: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+    }
+}
+
